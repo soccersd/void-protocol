@@ -257,7 +257,7 @@ export default function EventHorizon() {
                 Latest Block Height // HashCash Network
               </p>
               <motion.div
-                className="mt-3 sm:mt-4 h-1 bg-accent/20 rounded-full overflow-hidden">
+                className="mt-3 sm:mt-4 h-1 bg-accent/20 rounded-full overflow-hidden"
               >
                 <motion.div
                   className="h-full bg-accent"
