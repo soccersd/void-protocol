@@ -175,29 +175,29 @@ export default function EventHorizon() {
   }, [waveData])
 
   return (
-    <section ref={sectionRef} id="horizon" className="relative py-24 px-6 z-10 bg-black/50">
+    <section ref={sectionRef} id="horizon" className="relative py-16 sm:py-24 px-4 sm:px-6 z-10 bg-black/50">
       {/* Aggressive ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[70vw] bg-accent/[0.04] rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-1/3 left-1/4 w-[50vw] h-[50vw] bg-accent/[0.02] rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="mb-16 text-center reveal-target">
-          <p className="font-mono text-[10px] text-accent uppercase tracking-[0.3em] mb-2">03 // LIVE TELEMETRY</p>
-          <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-white mb-4 drop-shadow-[0_0_20px_rgba(157,0,255,0.3)]">
+        <div className="mb-12 sm:mb-16 text-center reveal-target">
+          <p className="font-mono text-[8px] sm:text-[10px] text-accent uppercase tracking-[0.2em] sm:tracking-[0.3em] mb-2">03 // LIVE TELEMETRY</p>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter text-white mb-3 sm:mb-4 drop-shadow-[0_0_20px_rgba(157,0,255,0.3)]">
             EVENT HORIZON
           </h2>
-          <p className="text-sm text-zinc-300 max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm text-zinc-300 max-w-2xl mx-auto px-2">
             Real-time monitoring of abyssal resonance frequencies and extraction network status across Sector_07.
           </p>
         </div>
 
         {/* Main Dashboard Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {/* Network Resonance (Waveform) */}
-          <div className="lg:col-span-2 p-6 rounded-sm border border-accent/20 bg-surface/50 backdrop-blur-xl shadow-[0_0_30px_rgba(157,0,255,0.2)]">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-xs font-mono text-accent uppercase tracking-[0.2em] font-bold">
+          <div className="lg:col-span-2 p-4 sm:p-6 rounded-sm border border-accent/20 bg-surface/50 backdrop-blur-xl shadow-[0_0_30px_rgba(157,0,255,0.2)]">
+            <div className="flex items-center justify-between mb-3 sm:mb-4">
+              <h3 className="text-[10px] sm:text-xs font-mono text-accent uppercase tracking-[0.15em] sm:tracking-[0.2em] font-bold">
                 NETWORK RESONANCE
               </h3>
               <div className="flex items-center gap-2">
@@ -206,11 +206,11 @@ export default function EventHorizon() {
                   animate={{ opacity: [1, 0.3, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 />
-                <span className="text-[10px] font-mono text-accent">LIVE</span>
+                <span className="text-[8px] sm:text-[10px] font-mono text-accent">LIVE</span>
               </div>
             </div>
             
-            <div className="relative h-48 bg-black/50 rounded-sm overflow-hidden border border-accent/10">
+            <div className="relative h-40 sm:h-48 bg-black/50 rounded-sm overflow-hidden border border-accent/10">
               <AnimatePresence>
                 {glitchActive && (
                   <motion.div
@@ -236,7 +236,7 @@ export default function EventHorizon() {
               <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_49.5%,rgba(157,0,255,0.05)_50%,transparent_50.5%)] bg-[length:20px_100%] pointer-events-none" />
             </div>
 
-            <div className="mt-4 flex items-center justify-between font-mono text-[10px]">
+            <div className="mt-3 sm:mt-4 flex flex-wrap items-center justify-between gap-2 font-mono text-[8px] sm:text-[10px]">
               <span className="text-zinc-500">FREQUENCY: 125.4 TH/s</span>
               <span className="text-zinc-500">AMPLITUDE: NORMAL</span>
               <span className="text-zinc-500">PHASE: STABLE</span>
@@ -244,20 +244,20 @@ export default function EventHorizon() {
           </div>
 
           {/* Extraction Depth & Uplinks */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {/* Extraction Depth */}
-            <div className="p-6 rounded-sm border border-accent/20 bg-surface/50 backdrop-blur-xl shadow-[0_0_20px_rgba(157,0,255,0.1)]">
-              <h3 className="text-xs font-mono text-accent uppercase tracking-[0.2em] font-bold mb-4">
+            <div className="p-4 sm:p-6 rounded-sm border border-accent/20 bg-surface/50 backdrop-blur-xl shadow-[0_0_20px_rgba(157,0,255,0.1)]">
+              <h3 className="text-[10px] sm:text-xs font-mono text-accent uppercase tracking-[0.15em] sm:tracking-[0.2em] font-bold mb-3 sm:mb-4">
                 EXTRACTION DEPTH
               </h3>
-              <div className="text-4xl font-black text-white mb-2 font-mono drop-shadow-[0_0_10px_rgba(157,0,255,0.5)]">
+              <div className="text-3xl sm:text-4xl font-black text-white mb-2 font-mono drop-shadow-[0_0_10px_rgba(157,0,255,0.5)]">
                 #{currentBlock.toLocaleString()}
               </div>
               <p className="text-[10px] font-mono text-zinc-500 uppercase">
                 Latest Block Height // HashCash Network
               </p>
               <motion.div
-                className="mt-4 h-1 bg-accent/20 rounded-full overflow-hidden"
+                className="mt-3 sm:mt-4 h-1 bg-accent/20 rounded-full overflow-hidden">
               >
                 <motion.div
                   className="h-full bg-accent"
@@ -268,20 +268,20 @@ export default function EventHorizon() {
             </div>
 
             {/* Grotto Uplinks */}
-            <div className="p-6 rounded-sm border border-accent/20 bg-surface/50 backdrop-blur-xl shadow-[0_0_20px_rgba(157,0,255,0.1)]">
-              <h3 className="text-xs font-mono text-accent uppercase tracking-[0.2em] font-bold mb-4">
+            <div className="p-4 sm:p-6 rounded-sm border border-accent/20 bg-surface/50 backdrop-blur-xl shadow-[0_0_20px_rgba(157,0,255,0.1)]">
+              <h3 className="text-[10px] sm:text-xs font-mono text-accent uppercase tracking-[0.15em] sm:tracking-[0.2em] font-bold mb-3 sm:mb-4">
                 GROTTO UPLINKS
               </h3>
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-4xl font-black text-white font-mono drop-shadow-[0_0_10px_rgba(157,0,255,0.5)]">
+                <span className="text-3xl sm:text-4xl font-black text-white font-mono drop-shadow-[0_0_10px_rgba(157,0,255,0.5)]">
                   {activeNodes}
                 </span>
-                <span className="text-xs font-mono text-zinc-500">/ 50 Nodes</span>
+                <span className="text-[10px] sm:text-xs font-mono text-zinc-500">/ 50 Nodes</span>
               </div>
               <p className="text-[10px] font-mono text-zinc-500 uppercase">
                 Active Nodes // Sector_07
               </p>
-              <div className="mt-4 grid grid-cols-5 gap-2">
+              <div className="mt-3 sm:mt-4 grid grid-cols-5 gap-2">
                 {Array.from({ length: 10 }).map((_, i) => (
                   <motion.div
                     key={i}
@@ -297,13 +297,13 @@ export default function EventHorizon() {
         </div>
 
         {/* Abyssal Radar & System Logs */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mt-8 sm:mt-12">
           {/* Abyssal Radar */}
-          <div className="p-6 rounded-sm border border-accent/20 bg-surface/50 backdrop-blur-xl shadow-[0_0_20px_rgba(157,0,255,0.1)]">
-            <h3 className="text-xs font-mono text-accent uppercase tracking-[0.2em] font-bold mb-4">
+          <div className="p-4 sm:p-6 rounded-sm border border-accent/20 bg-surface/50 backdrop-blur-xl shadow-[0_0_20px_rgba(157,0,255,0.1)]">
+            <h3 className="text-[10px] sm:text-xs font-mono text-accent uppercase tracking-[0.15em] sm:tracking-[0.2em] font-bold mb-3 sm:mb-4">
               ABYSSAL RADAR // SECTOR_07
             </h3>
-            <div className="relative h-80 bg-black/50 rounded-sm overflow-hidden border border-accent/10">
+            <div className="relative h-64 sm:h-80 bg-black/50 rounded-sm overflow-hidden border border-accent/10">
               {/* Radar circles */}
               <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
                 <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(157,0,255,0.1)" strokeWidth="0.5" />
@@ -372,7 +372,7 @@ export default function EventHorizon() {
             </div>
 
             {/* Node list */}
-            <div className="mt-4 grid grid-cols-2 gap-2 font-mono text-[10px]">
+            <div className="mt-3 sm:mt-4 grid grid-cols-2 gap-2 font-mono text-[8px] sm:text-[10px]">
               {nodes.slice(0, 6).map((node) => (
                 <div key={node.id} className="flex items-center gap-2">
                   <motion.div

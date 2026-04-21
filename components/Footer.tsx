@@ -4,19 +4,19 @@ import { Icon } from '@iconify/react'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-accent/10 bg-void py-12 relative z-10">
+    <footer className="border-t border-accent/10 bg-void py-12 sm:py-16 relative z-10">
       {/* Aggressive ambient glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60vw] h-[60vw] bg-accent/[0.03] rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Footer Header */}
-        <div className="text-center mb-12">
-          <h3 className="text-xl font-black text-white mb-2 font-sans drop-shadow-[0_0_20px_rgba(157,0,255,0.3)]">
+        <div className="text-center mb-8 sm:mb-12">
+          <h3 className="text-lg sm:text-xl font-black text-white mb-2 font-sans drop-shadow-[0_0_20px_rgba(157,0,255,0.3)]">
             FOOTER ARCHITECTURE: [TERMINAL EXIT]
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
@@ -70,12 +70,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-accent/10 flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-[10px] text-zinc-600 uppercase tracking-[0.2em]">
+        <div className="pt-6 sm:pt-8 border-t border-accent/10 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 font-mono text-[8px] sm:text-[10px] text-zinc-600 uppercase tracking-[0.15em] sm:tracking-[0.2em]">
           <div className="flex items-center gap-2">
             <Icon icon="solar:shield-check-linear" className="text-sm text-accent" />
             © 2026 VOID-PROTOCOL. All Rights Reserved.
           </div>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-3 sm:gap-6 justify-center sm:justify-end">
             <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-accent transition-colors">Telegram</a>

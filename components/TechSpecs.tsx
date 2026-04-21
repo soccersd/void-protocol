@@ -25,17 +25,17 @@ export default function TechSpecs() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="protocols" className="relative py-24 px-6 z-10 bg-black/30">
+    <section ref={sectionRef} id="protocols" className="relative py-16 sm:py-24 px-4 sm:px-6 z-10 bg-black/30">
       {/* Aggressive ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[70vw] bg-accent/[0.04] rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 left-1/3 w-[50vw] h-[50vw] bg-accent/[0.02] rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="mb-16 text-center reveal-target">
-          <p className="font-mono text-[10px] text-accent uppercase tracking-[0.3em] mb-2">02 // VOID PHYSICS</p>
-          <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-white mb-4 drop-shadow-[0_0_20px_rgba(157,0,255,0.3)]">RESONANCE FIDELITY & STRUCTURAL INTEGRITY</h2>
-          <p className="text-sm text-zinc-300 max-w-2xl mx-auto">
+        <div className="mb-12 sm:mb-16 text-center reveal-target">
+          <p className="font-mono text-[8px] sm:text-[10px] text-accent uppercase tracking-[0.2em] sm:tracking-[0.3em] mb-2">02 // VOID PHYSICS</p>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter text-white mb-3 sm:mb-4 drop-shadow-[0_0_20px_rgba(157,0,255,0.3)]">RESONANCE FIDELITY & STRUCTURAL INTEGRITY</h2>
+          <p className="text-xs sm:text-sm text-zinc-300 max-w-2xl mx-auto px-2">
             Validated through high-pressure simulations in Sector_07. All metrics are stabilized for peak extraction throughput within the Club HashCash ecosystem.
           </p>
         </div>

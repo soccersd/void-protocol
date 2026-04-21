@@ -149,13 +149,13 @@ function ProductCard({ miner, index }: { miner: MinerSpecs; index: number }) {
       {/* Accent Line */}
       <div className={`h-1 w-full ${miner.accent}`} />
 
-      <div className="p-8 flex flex-col flex-1">
+      <div className="p-6 sm:p-8 flex flex-col flex-1">
         {/* Header */}
-        <div className="mb-6">
+        <div className="mb-4 sm:mb-6">
           <div className="flex items-center gap-3 mb-2">
             <span className={`w-2 h-2 ${miner.accent} shadow-lg ${miner.glowColor}`} />
             <div>
-              <h3 className="text-2xl font-medium tracking-tight text-white">{miner.name}</h3>
+              <h3 className="text-xl sm:text-2xl font-medium tracking-tight text-white">{miner.name}</h3>
               <p className="font-mono text-[10px] text-zinc-500 tracking-wider uppercase">{miner.codeName}</p>
             </div>
           </div>
@@ -163,12 +163,12 @@ function ProductCard({ miner, index }: { miner: MinerSpecs; index: number }) {
         </div>
 
         {/* Product Visual with Glitch Effect */}
-        <GlitchImage className="mb-6 rounded-sm bg-black/50 border border-white/[0.03] flex items-center justify-center relative overflow-hidden" style={{ height: '320px' }}>
+        <GlitchImage className="mb-4 sm:mb-6 rounded-sm bg-black/50 border border-white/[0.03] flex items-center justify-center relative overflow-hidden" style={{ height: '240px' }}>
           {/* Product Image */}
           <img 
             src={miner.image} 
             alt={miner.name}
-            className="w-full h-full object-contain p-4"
+            className="w-full h-full object-contain p-2 sm:p-4"
           />
           
           {/* Breathing glow overlay */}
@@ -180,27 +180,27 @@ function ProductCard({ miner, index }: { miner: MinerSpecs; index: number }) {
         </GlitchImage>
 
         {/* Specs */}
-        <div className="space-y-3 mb-6">
+        <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
           <div className="flex justify-between items-center py-2 border-b border-white/[0.03]">
             <TerminalText text="HASHRATE" visible={isVisible} />
-            <span className="text-sm font-mono text-zinc-300">{miner.hashrate}</span>
+            <span className="text-xs sm:text-sm font-mono text-zinc-300">{miner.hashrate}</span>
           </div>
           <div className="flex justify-between items-center py-2 border-b border-white/[0.03]">
             <TerminalText text="POWER" visible={isVisible} />
-            <span className="text-sm font-mono text-zinc-300">{miner.power}</span>
+            <span className="text-xs sm:text-sm font-mono text-zinc-300">{miner.power}</span>
           </div>
-          <div className="flex justify-between items-center py-2">
+          <div className="flex justify-between items-center py-1.5 sm:py-2">
             <TerminalText text="PRICE" visible={isVisible} />
-            <span className="text-lg font-mono text-accent font-medium">{miner.price}</span>
+            <span className="text-base sm:text-lg font-mono text-accent font-medium">{miner.price}</span>
           </div>
         </div>
 
         {/* Features - Fixed height with flex */}
-        <div className="space-y-2 mb-6 flex-1">
+        <div className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6 flex-1">
           {miner.features.map((feature) => (
             <div key={feature} className="flex items-center gap-2">
               <Icon icon="solar:check-circle-linear" className="text-accent text-sm flex-shrink-0" />
-              <span className="text-xs text-zinc-400">{feature}</span>
+              <span className="text-[10px] sm:text-xs text-zinc-400 font-mono">{feature}</span>
             </div>
           ))}
         </div>
@@ -211,7 +211,7 @@ function ProductCard({ miner, index }: { miner: MinerSpecs; index: number }) {
         </div>
 
         {/* CTA - Push to bottom */}
-        <button className="w-full py-3 mt-6 border border-white/10 text-white font-mono text-xs uppercase tracking-[0.15em] transition-all duration-300 hover:border-accent hover:bg-accent/10">
+        <button className="w-full py-2.5 sm:py-3 mt-4 sm:mt-6 border border-white/10 text-white font-mono text-[10px] sm:text-xs uppercase tracking-[0.15em] transition-all duration-300 hover:border-accent hover:bg-accent/10">
           Access Schematics
         </button>
       </div>
@@ -241,18 +241,18 @@ export default function ProductLineup() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="hardware" className="relative py-24 px-6 z-10">
+    <section ref={sectionRef} id="hardware" className="relative py-16 sm:py-24 px-4 sm:px-6 z-10">
       {/* Aggressive ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[70vw] bg-accent/[0.04] rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-1/3 right-1/4 w-[40vw] h-[40vw] bg-accent/[0.02] rounded-full blur-[100px] pointer-events-none" />
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="mb-16 flex items-end justify-between border-b border-accent/10 pb-6 reveal-target relative">
+        <div className="mb-12 sm:mb-16 flex flex-col sm:flex-row items-start sm:items-end justify-between border-b border-accent/10 pb-4 sm:pb-6 reveal-target relative gap-4">
           <div>
             <p className="font-mono text-[10px] text-accent uppercase tracking-[0.3em] mb-2">01 // STABILIZED ANOMALIES</p>
-            <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-white mb-4 drop-shadow-[0_0_20px_rgba(157,0,255,0.3)]">STABILIZED ANOMALY SERIES</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tighter text-white mb-3 sm:mb-4 drop-shadow-[0_0_20px_rgba(157,0,255,0.3)]">STABILIZED ANOMALY SERIES</h2>
             <p className="font-mono text-[10px] text-accent/80 uppercase tracking-[0.2em] mb-4">ABYSSAL EXTRACTION UNITS</p>
-            <p className="text-sm text-zinc-300 max-w-2xl font-mono leading-relaxed">
+            <p className="text-xs sm:text-sm text-zinc-300 max-w-2xl font-mono leading-relaxed">
               {"A tiered lineup of high-fidelity extraction units synthesized from Grotto minerals. Engineered to maintain structural integrity and resonance stability across varying depths—from personal resonance shards to high-density industrial singularities."}
             </p>
           </div>
@@ -260,7 +260,7 @@ export default function ProductLineup() {
         </div>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {miners.map((miner, index) => (
             <ProductCard key={miner.model} miner={miner} index={index} />
           ))}
