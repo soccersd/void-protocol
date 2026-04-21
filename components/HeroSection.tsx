@@ -85,9 +85,9 @@ export default function HeroSection() {
 
           {/* Tactical Overlay Specs */}
           <div className="absolute top-2 sm:top-4 left-3 sm:left-6 flex flex-col font-mono text-[8px] sm:text-[10px] text-zinc-400 z-30 uppercase tracking-widest space-y-0.5 sm:space-y-1">
-            <span className="text-accent">{">"} CLASS: ELITE COMMAND</span>
-            <span>{">"} MODEL: RESONATOR R-01</span>
-            <span>{">"} STATUS: <span className="text-accent font-bold">DEPLOYMENT READY</span></span>
+            <span className="text-accent">&gt; CLASS: ELITE COMMAND</span>
+            <span>&gt; MODEL: RESONATOR R-01</span>
+            <span>&gt; STATUS: <span className="text-accent font-bold">DEPLOYMENT READY</span></span>
           </div>
           
           <div className="absolute top-2 sm:top-4 right-3 sm:right-6 flex flex-col items-end font-mono text-[8px] sm:text-[10px] text-zinc-500 z-30 uppercase tracking-widest space-y-0.5 sm:space-y-1">
