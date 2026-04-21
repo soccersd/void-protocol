@@ -54,7 +54,7 @@ const miners: MinerSpecs[] = [
     model: 'A-X',
     tier: 'Enterprise / Whales',
     description: 'Levitating components with magnetic fields',
-    image: '/images/anomaly-x.jpeg',
+    image: '/images/Anomaly-X.jpeg',
     hashrate: 'TBD',
     power: 'TBD',
     price: 'TBD',
