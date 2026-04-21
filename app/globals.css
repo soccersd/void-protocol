@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    cursor: none;
+    background-color: #030303;
+  }
+}
+
+@layer components {
+  /* Subtle Noise Texture */
+  .bg-noise {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="n"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23n)"/%3E%3C/svg%3E');
+    opacity: 0.03;
+    mix-blend-mode: screen;
+  }
+
+  /* Industrial Schematic Grid */
+  .schematic-bg {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+    z-index: 0;
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
+  }
+
+  /* Glitch Effect - Refined for Luxury Feel */
+  .glitch-text {
+    position: relative;
+    display: inline-block;
+  }
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .glitch-text:hover::before {
+    opacity: 0.8;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: -1;
+    animation: glitch-anim-1 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite alternate;
+  }
+  .glitch-text:hover::after {
+    opacity: 0.8;
+    color: #9D00FF;
+    z-index: -2;
+    animation: glitch-anim-2 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite alternate;
+  }
+
+  @keyframes glitch-anim-1 {
+    0% { clip-path: inset(20% 0 80% 0); transform: translate(-1px, 1px); }
+    50% { clip-path: inset(60% 0 10% 0); transform: translate(1px, -1px); }
+    100% { clip-path: inset(40% 0 50% 0); transform: translate(-1px, 1px); }
+  }
+
+  @keyframes glitch-anim-2 {
+    0% { clip-path: inset(10% 0 60% 0); transform: translate(1px, -1px); }
+    50% { clip-path: inset(30% 0 20% 0); transform: translate(-1px, 1px); }
+    100% { clip-path: inset(70% 0 10% 0); transform: translate(1px, 1px); }
+  }
+
+  /* Hardware Interface Lines */
+  .tech-line {
+    background: linear-gradient(90deg, transparent, rgba(157, 0, 255, 0.5), transparent);
+  }
+
+  /* Reveal Utilities */
+  .reveal-target {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 1s ease-out, transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Slow pulse for breathing effect */
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(0.95);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.05);
+    }
+  }
+
+  /* Custom Scrollbar for inner containers if needed */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #27272a;
+  }
+}
