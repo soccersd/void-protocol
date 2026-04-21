@@ -97,24 +97,15 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-20">
             {/* Brand Section (Left) */}
             <div className="flex items-center gap-4">
-              {/* Pulsing violet diamond logo */}
+              {/* VOID-PROTOCOL Logo */}
               <motion.div
-                className="relative w-8 h-8"
-                animate={{ rotate: 0 }}
+                className="relative w-10 h-10"
                 whileHover={{ scale: 1.1 }}
               >
-                <motion.div
-                  className="absolute inset-0 bg-accent rounded-sm"
-                  style={{ rotate: '45deg' }}
-                  animate={{
-                    opacity: [0.6, 1, 0.6],
-                    boxShadow: [
-                      '0 0 10px rgba(157, 0, 255, 0.3)',
-                      '0 0 20px rgba(157, 0, 255, 0.6)',
-                      '0 0 10px rgba(157, 0, 255, 0.3)'
-                    ]
-                  }}
-                  transition={{ duration: 2, repeat: Infinity }}
+                <img
+                  src="/logos/void-protocol-logo.jpg"
+                  alt="VOID-PROTOCOL Logo"
+                  className="w-full h-full object-contain"
                 />
               </motion.div>
 
