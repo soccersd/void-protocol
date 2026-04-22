@@ -207,6 +207,26 @@ Real-time dashboard featuring:
 
 © 2026 VOID-PROTOCOL. All Rights Reserved.
 
+This project is submitted to the **Club HashCash Hashathon 2026** under the Hardware Supplier Track.
+
+### Intellectual Property
+- **Participants retain ownership** of all work submitted
+- VOID-PROTOCOL brand, code, and artwork remain property of the creator
+- By submitting, Club HashCash is granted the right to showcase and promote this work
+- For Hardware Supplier Track winners, Club HashCash may distribute miners under this brand
+
+### Smart Contracts
+This project does **not** include smart contracts. All code is frontend/web application only.
+
+### Open Source Policy
+- No smart contracts requiring hCASH infrastructure integration
+- Standard open-source license (MIT/Apache-2.0) not required for this submission
+- Repository is public for judging and evaluation purposes
+
+---
+
+**For inquiries:** [@voidprotocolxs](https://x.com/voidprotocolxs)
+
 ---
 
 <div align="center">
