@@ -212,8 +212,9 @@ This project is submitted to the **Club HashCash Hashathon 2026** under the Hard
 ### Intellectual Property
 - **Participants retain ownership** of all work submitted
 - VOID-PROTOCOL brand, code, and artwork remain property of the creator
-- By submitting, Club HashCash is granted the right to showcase and promote this work
-- For Hardware Supplier Track winners, Club HashCash may distribute miners under this brand
+- By submitting, Club HashCash is granted the right to showcase submissions and reference/promote the work in ecosystem materials
+- **For Hardware Supplier Track selected winners:** Club HashCash is granted rights to **distribute and list miners** under the submitted VOID-PROTOCOL brand and artwork
+- VOID-PROTOCOL team retains full ownership and can continue using the brand for other purposes
 
 ### Smart Contracts
 This project does **not** include smart contracts. All code is frontend/web application only.
